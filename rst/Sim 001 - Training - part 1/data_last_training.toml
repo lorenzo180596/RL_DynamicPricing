@@ -1,0 +1,5 @@
+epsilon = "0.05"
+best_avg_reward = "-75.64934496512313"
+last_avg_reward = "-1893.7521016711505"
+last_episode = 499
+total_episode_this_NN = 500

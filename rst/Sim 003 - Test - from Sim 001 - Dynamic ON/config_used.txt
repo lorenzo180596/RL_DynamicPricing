@@ -1,0 +1,179 @@
+[models]: 
+	 - state: state4 
+	 - action: action3 
+	 - algorithm: ddqn 
+	 - reward: reward3 
+[simulation]: 
+	 - mode: 2 
+	 - load_nn: True 
+	 - early_termination: True 
+	 - random_starting: True 
+	 - random_demand: True 
+	 - dynamic_our_property: True 
+	 - random_total_days: True 
+	 - min_days: 180 
+	 - max_days: 180 
+	 - initial_date: 2023-01-01 
+	 - final_date: 2023-03-30 
+	 - use_real_data: False 
+	 - use_custom_seed: False 
+	 - custom_seed: 4702478 
+	 - tot_episodes: 1 
+	 - how_many_episode_every_save: 250 
+	 - dynamic_price_competitors: True 
+	 - max_customers_coming_back_day: 4 
+[RL]: 
+	 - rewards_window_size: 100 
+	 - max_avg_rewards: 100000 
+[storage]: 
+	 - chart_folder_name: Charts 
+	 - folder_name: rst 
+	 - excel_name: Output_sim 
+	 - network_name: Policy_model_checkpoint.pth 
+	 - chart_name: Training_results.png 
+[location]: 
+	 - name:  
+	 - latitude: 0.0 
+	 - longitude: 0.0 
+[demand]: 
+	 - method: poisson 
+[our_property]: 
+	 - type: hotel 
+	 - max_stars: 5 
+	 - min_stars: 2 
+	 - max_rating_init: 5 
+	 - min_rating_init: 0 
+	 - max_rating_cnt: 500 
+	 - min_rating_cnt: 0 
+	 - max_init_price: 200 
+	 - min_init_price: 50 
+	 - min_room_price: 10 
+	 - max_init_capacity: 250 
+	 - min_init_capacity: 50 
+	 - max_position: 5 
+	 - min_position: 0 
+[competitors]: 
+	 - n_hotel: 3 
+	 - n_small_hotel: 0 
+	 - n_bedandbreakfast: 0 
+	 - max_value_for_score: 5 
+[hotel]: 
+	 - type: hotel 
+	 - max_stars: 5 
+	 - min_stars: 2 
+	 - max_rating_init: 5 
+	 - min_rating_init: 2 
+	 - max_rating_cnt: 500 
+	 - min_rating_cnt: 0 
+	 - max_init_price: 200 
+	 - min_init_price: 50 
+	 - min_room_price_ub: 120 
+	 - min_room_price_lb: 30 
+	 - max_init_capacity: 250 
+	 - min_init_capacity: 50 
+	 - max_position: 5 
+	 - min_position: 3 
+	 - rate_increase_price: 1 
+	 - rate_decrease_price: 5 
+[small_hotel]: 
+	 - type: small_hotel 
+	 - max_stars: 3 
+	 - min_stars: 2 
+	 - max_rating_init: 5 
+	 - min_rating_init: 0 
+	 - max_rating_cnt: 500 
+	 - min_rating_cnt: 0 
+	 - max_init_price: 120 
+	 - min_init_price: 80 
+	 - min_room_price_ub: 80 
+	 - min_room_price_lb: 40 
+	 - max_init_capacity: 100 
+	 - min_init_capacity: 40 
+	 - min_position: 0 
+	 - max_position: 5 
+	 - rate_increase_price: 1 
+	 - rate_decrease_price: 5 
+[bedandbreakfast]: 
+	 - type: bedandbreakfast 
+	 - max_stars: 0 
+	 - min_stars: 0 
+	 - max_rating_init: 5 
+	 - min_rating_init: 0 
+	 - max_rating_cnt: 500 
+	 - min_rating_cnt: 0 
+	 - max_init_price: 90 
+	 - min_init_price: 50 
+	 - min_room_price_ub: 50 
+	 - min_room_price_lb: 30 
+	 - max_init_capacity: 25 
+	 - min_init_capacity: 10 
+	 - max_position: 5 
+	 - min_position: 2 
+	 - rate_increase_price: 1 
+	 - rate_decrease_price: 5 
+[customers]: 
+	 - total_number_no_random: 1000 
+	 - max_number_random: 2000 
+	 - min_number_random: 10 
+	 - max_price_interest: 10 
+	 - min_price_interest: 6 
+	 - max_position_interest: 10 
+	 - min_position_interest: 6 
+	 - max_review_interest: 10 
+	 - min_review_interest: 6 
+	 - max_price_limit: 250 
+	 - min_price_limit: 120 
+	 - ub_min_value_acceptable: 80 
+	 - lb_min_value_acceptable: 20 
+	 - max_delete_booking_prob: 20 
+	 - min_delete_booking_prob: 5 
+	 - deviation_from_max: 90 
+[ddqn]: 
+	 - gamma: 0.95 
+	 - learning_rate: 0.0005 
+	 - batch_size: 64 
+	 - fcnet_hiddens: [64, 64] 
+	 - fcnet_activation: relu 
+	 - num_atoms: 1 
+	 - v_min: -10000 
+	 - v_max: 10000 
+	 - noisy: False 
+	 - dueling: True 
+	 - hidden_size: 128 
+	 - double_q: True 
+	 - update_step: 4 
+	 - max_epsilon: 1 
+	 - min_epsilon: 0.05 
+	 - epsilon_test: 1 
+	 - decay_rate: 0.1 
+	 - memory_size: 100000 
+	 - tau: 0.01 
+[rainbow]: 
+	 - gamma: 0.99 
+	 - learning_rate: 0.0005 
+	 - batch_size: 64 
+	 - fcnet_hiddens: [32, 32] 
+	 - fcnet_activation: relu 
+	 - num_atoms: 10 
+	 - v_min: -10000 
+	 - v_max: 10000 
+	 - noisy: True 
+	 - dueling: True 
+	 - hidden_size: 64 
+	 - double_q: True 
+	 - update_step: 4 
+	 - max_epsilon: 1.0 
+	 - min_epsilon: 0.01 
+	 - decay_rate: 1e-05 
+	 - memory_size: 100000 
+	 - tau: 0.01 
+[td3]: 
+	 - gamma: 0.99 
+	 - learning_rate: 0.0005 
+	 - batch_size: 64 
+	 - twin_q: True 
+	 - actor_hiddens: [256, 128] 
+	 - actor_hidden_activation: relu 
+	 - critic_hiddens: [256, 128] 
+	 - critic_hidden_activation: relu 
+	 - tau: 0.005 
