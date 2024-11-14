@@ -1,3 +1,16 @@
+"""
+
+This module contain all the functionality to correctly store and save the data generated.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. Storage
+   - define the paths for all the relevant data that need to be saved
+
+"""
+
 import os
 
 class Storage():

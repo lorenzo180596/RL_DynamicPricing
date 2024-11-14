@@ -1,3 +1,11 @@
+"""
+This module provides the main functionality able to run all the simulation.
+Select the kind of simulation you want to perform through the config file.
+With respect to the main.py module, here the algorithm is created using the stable baseline library.
+
+Refer to the main.py file for further information.
+"""
+
 import os
 import sys
 import toml

@@ -1,3 +1,16 @@
+"""
+
+This module contain all the functionality to compute the simulated demand of customer in the selected period.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. Demand
+   - compute the number of customer arrival for each day of the simulation
+
+"""
+
 import numpy as np
 
 class Demand():

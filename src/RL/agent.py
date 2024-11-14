@@ -1,3 +1,23 @@
+"""
+
+This module contain all the functionality to define and setup the agent:
+- number of states
+- number of actions
+- batch size, memory size
+- number of step for the target network update
+- learning rate
+- gamma parameter for the discount of the q-values
+- tau parameter for the soft copy of the target network
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. DDQN_Agent
+   - create and define the agent parameters using the DDQN algorithm, the gpu, and the method to take actions and to learn
+
+"""
+
 import torch
 import torch.nn.functional as F
 

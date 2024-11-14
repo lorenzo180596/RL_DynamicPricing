@@ -1,3 +1,15 @@
+"""
+This module provides the main functionality able to run all the simulation.
+Select the kind of simulation you want to perform through the config file.
+
+Example
+-------------
+Select mode = 1 in the config file to run the training of the DDDQN algorithm.
+If load_nn is set to true in the config file it will be requested to import a previously trained neural network to resume training.
+Then, simulation will start and will last for the number of episodes set up in the config file. A subfolder in the rst folder will be generated with the output. 
+
+"""
+
 import toml
 import numpy as np
 import os

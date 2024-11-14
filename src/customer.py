@@ -1,3 +1,34 @@
+"""
+
+This module define the customer class used to create the customer instances. Each customer has different characteristic:
+- price interest
+- position interest
+- review interest
+- price limit
+- minimum rating acceptable
+- delete booking probability
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. Customer
+   - set up the customer interests and action available
+
+
+Example
+-------------
+customer = Customer(price_interest,
+        position_interest,
+        review_interest,
+        price_limit,
+        min_value_acceptable,
+        delete_booking_prob,
+        max_value_for_hotel_score,
+        deviation_from_max)
+
+"""
+
 import numpy as np
 
 RATING_INDEX = 0

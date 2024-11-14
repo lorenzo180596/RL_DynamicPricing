@@ -1,3 +1,20 @@
+"""
+
+This module contain all the functionality to define the hotel for the simulations
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. Property
+   - Superclass used for Competitor and OurProperty subclasses
+   - Define all the main properties characteristic: position, type, stars, rating, price, capacity, dynamic pricing flag, and geographical information if real world data are used
+2. Competitor
+   - subclass of Property: define the competitors hotel used in the simulation
+3. OurProperty
+   - subclass of Property: define the hotel that will use the RL algorithm as benchmark
+"""
+
 from datetime import timedelta
 from itertools import count
 import numpy as np
@@ -139,7 +156,6 @@ class Property():
         if not self.use_real_data:
             self.losses[day] += booked_price
         
-
 class Competitor(Property):
 
 

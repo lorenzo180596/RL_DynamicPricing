@@ -1,3 +1,29 @@
+"""
+
+This module contain all the functionality to use real world data to perform the simulation.
+A key to use gspread library is needed.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. DBscraper
+   - retrieve a location information based on a spreadsheet imported
+
+Example
+-------------
+dbs = DBScraper(
+        city_name,
+        location.latitude,
+        location.longitude,
+        initial_date,
+        final_date
+    )
+
+    data = dbs.get_data()
+
+"""
+
 import gspread
 from geopy import distance
 from datetime import date, timedelta

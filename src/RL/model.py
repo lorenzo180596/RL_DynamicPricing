@@ -1,3 +1,19 @@
+"""
+
+This module contain all the functionality to define the neural network used by the agent. 
+Model is created through the torch library.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. DDQN_Graph
+   - Define the DDQN algorithm to be used by the agent, and all the hidden layers
+2. ReplayMemory
+   - Create the memory buffer used by the agent to retrieve past experiences during the training.
+
+"""
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

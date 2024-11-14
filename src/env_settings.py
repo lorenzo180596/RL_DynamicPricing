@@ -1,3 +1,21 @@
+"""
+
+This module contain aall the setting related to the agent:
+- reward
+- action space
+- state space
+
+In the config file the different options can be selected under the section "models".
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. Env_settings
+   - define observation, state, action space and reward
+
+"""
+
 import numpy as np
 
 from gym import spaces

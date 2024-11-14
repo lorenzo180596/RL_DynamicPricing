@@ -1,3 +1,16 @@
+"""
+
+This module contain all the step necessary to run the booking process for each customer and each hotel.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. SimulationEnvironment
+   - Define all the methods necessary to run the booking process: customer arrival, customer evaluation, customer booking and customer booking cancellation
+
+"""
+
 import numpy as np
 
 from gym import Env

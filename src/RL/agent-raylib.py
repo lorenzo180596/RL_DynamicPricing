@@ -1,3 +1,21 @@
+"""
+
+This module contain all the functionality to define and setup the agent, using the raylib library.
+For furhter information refer to the agent module.
+
+Classes
+--------------------
+In that file the following classes are defined:
+
+1. DDQN_Agent
+   - create and define the agent parameters using the DDQN algorithm, the gpu, and the method to take actions and to learn
+2. RainbowAgent
+   - create and define the agent parameters using the rainbow algorithm, the gpu, and the method to take actions and to learn
+3. TD3Agent
+   - create and define the agent parameters using the td3 algorithm, the gpu, and the method to take actions and to learn
+
+"""
+
 import os
 import tomli
 import ray
@@ -75,7 +93,6 @@ class DDQNAgent():
 
     def test(self):
         pass
-
 
 class RainbowAgent():
     def __init__(self):

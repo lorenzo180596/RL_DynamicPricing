@@ -1,3 +1,37 @@
+"""
+
+This module contain all the needed function used in the main file to properly run the simulation and generate the output.
+
+Function
+--------------------
+In that file the following functions are defined:
+
+1. get_config_file
+   - used to load the config file and read all the setup
+2. get_data_last_training_file
+   - used to resume the data generated in a previously interropted training if load_nn flag is set to true in the config file
+3. get_memory_buffer
+   - used to resume the memory buffer of the DDDQN generated in a previously interropted training if load_nn flag is set to true in the config file
+4. save_data_to_excel
+   - used to create a spreadsheet file to resume the results of the simulations
+5. compute_cumulative_data_episodes
+   - used to compute the cumulative data for each episode. Needed to plot the data into the corresponding charts
+6. compute_mean_data_episodes
+   - used to average values for each episode. Needed to plot the data into the corresponding charts 
+7. get_y_ticks
+   - used to dynamically change the y ticks in the charts depending on the data generated
+8. get_x_ticks
+   - used to dynamically change the x ticks in the charts depending on the data generated 
+9. plot_data
+   - used to plot all the data in separate charts saved in rst folder. Plot are created only in testing mode 
+10. sim_episode
+   - run a complete episode from day 1 and compute reward for the agent
+11. validate_NN
+   - used in the validation mode to compare the DDDQN results with the scenario without RL algorithm
+12. plot_validation_chart
+   - used to plot the validation chart when in the validation mode
+"""
+
 import numpy as np
 import os
 import pandas as pd
